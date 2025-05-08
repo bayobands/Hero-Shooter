@@ -7,15 +7,9 @@ class Play extends Phaser.Scene {
     constructor() {
         super("Play");
 
-        // Initialize a class variable "my" which is an object.
-        // The object has two properties, both of which are objects
-        //  - "sprite" holds bindings (pointers) to created sprites
-        //  - "text"   holds bindings to created bitmap text objects
         this.my = {sprite: {}, text: {}};
 
-        // Create a property inside "sprite" named "bullet".
-        // The bullet property has a value which is an array.
-        // This array will hold bindings (pointers) to bullet sprites
+
         this.my.sprite.bullet = [];   
         this.maxBullets = 1;           // Don't create more than this many bullets
         
@@ -106,7 +100,7 @@ class Play extends Phaser.Scene {
         this.bulletSpeed = 11;
 
         // update HTML description
-        document.getElementById('description').innerHTML = '<h2>How to Play</h2><br>A: left // D: right // Space: Throw Knives<br>';
+        document.getElementById('description').innerHTML = '<h2>How to Play</h2><br>A: left // D: right // Space: Throw Knives<br>Score 300 points to win!<br>';
 
         // Put score on screen
         my.text.score = this.add.bitmapText(580, 0, "rocketSquare", "Score " + this.myScore);

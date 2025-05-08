@@ -126,7 +126,7 @@ class PlayAct2 extends Phaser.Scene {
         this.bulletSpeed = 14;
 
         // update HTML description
-        document.getElementById('description').innerHTML = '<h2>How to Play</h2><br>A: left // D: right // Space: Throw Knives<br>';
+        document.getElementById('description').innerHTML = '<h2>How to Play</h2><br>A: left // D: right // Space: Throw Knives<br>Score 400 points to win!<br>';
 
         // Put score on screen
         my.text.score = this.add.bitmapText(580, 0, "rocketSquare", "Score " + this.myScore);
